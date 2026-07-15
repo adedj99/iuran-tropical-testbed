@@ -11,9 +11,8 @@ jobs:
     steps:
       - name: Ping Supabase Testbed
         env:
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL_TESTBED }}
           SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY_TESTBED }}
- run: |
+        run: |
           curl -X GET "https://ccsfqzxqpnixenihyhhg.supabase.co/rest/v1/settings?select=id&limit=1" \
             -H "apikey: $SUPABASE_ANON_KEY" \
             -H "Authorization: Bearer $SUPABASE_ANON_KEY"
