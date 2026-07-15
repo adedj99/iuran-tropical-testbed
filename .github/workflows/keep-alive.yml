@@ -13,7 +13,7 @@ jobs:
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL_TESTBED }}
           SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY_TESTBED }}
-        run: |
-          curl -X GET "$SUPABASE_URL/rest/v1/settings?select=id&limit=1" \
+ run: |
+          curl -X GET "https://ccsfqzxqpnixenihyhhg.supabase.co/rest/v1/settings?select=id&limit=1" \
             -H "apikey: $SUPABASE_ANON_KEY" \
             -H "Authorization: Bearer $SUPABASE_ANON_KEY"
